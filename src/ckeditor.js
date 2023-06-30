@@ -116,8 +116,13 @@ Editor.builtinPlugins = [
 	WordCount
 ];
 
+
+
 // Editor configuration.
 Editor.defaultConfig = {
+	htmlEmbed: {
+            showPreviews: true,
+        },
 	toolbar: {
 		items: [
 			'heading',
@@ -138,9 +143,9 @@ Editor.defaultConfig = {
 			'fontFamily',
 			'|',
 			'imageUpload',
+			'htmlEmbed',
 			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
 			'undo',
 			'redo'
 		]
