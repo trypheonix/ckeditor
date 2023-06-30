@@ -56,13 +56,15 @@ import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 import {Clipboard, DragDropExperimental} from '@ckeditor/ckeditor5-clipboard';
+import {Undo} from "@ckeditor/ckeditor5-undo";
 
 class Editor extends InlineEditor {
 }
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
-    Clipboard, DragDropExperimental,
+    Clipboard,
+    DragDropExperimental,
     Alignment,
     AutoImage,
     Autoformat,
@@ -113,7 +115,8 @@ Editor.builtinPlugins = [
     TableToolbar,
     TextTransformation,
     TodoList,
-    Underline
+    Underline,
+    Undo
 ];
 
 // Editor configuration.
