@@ -55,113 +55,116 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
+import {Clipboard, DragDropExperimental} from '@ckeditor/ckeditor5-clipboard';
 
-class Editor extends InlineEditor {}
+class Editor extends InlineEditor {
+}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
-	Alignment,
-	AutoImage,
-	Autoformat,
-	AutoLink,
-	Autosave,
-	BlockQuote,
-	Bold,
-	Code,
-	CodeBlock,
-	Essentials,
-	FontBackgroundColor,
-	FontColor,
-	FontFamily,
-	FontSize,
-	GeneralHtmlSupport,
-	Heading,
-	Highlight,
-	HorizontalLine,
-	Image,
-	ImageCaption,
-	ImageInsert,
-	ImageResize,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
-	Indent,
-	Italic,
-	Link,
-	LinkImage,
-	List,
-	ListProperties,
-	Markdown,
-	MediaEmbed,
-	MediaEmbedToolbar,
-	Mention,
-	Paragraph,
-	PasteFromOffice,
-	RemoveFormat,
-	Strikethrough,
-	Style,
-	Subscript,
-	Superscript,
-	Table,
-	TableCaption,
-	TableCellProperties,
-	TableColumnResize,
-	TableProperties,
-	TableToolbar,
-	TextTransformation,
-	TodoList,
-	Underline
+    Clipboard, DragDropExperimental,
+    Alignment,
+    AutoImage,
+    Autoformat,
+    AutoLink,
+    Autosave,
+    BlockQuote,
+    Bold,
+    Code,
+    CodeBlock,
+    Essentials,
+    FontBackgroundColor,
+    FontColor,
+    FontFamily,
+    FontSize,
+    GeneralHtmlSupport,
+    Heading,
+    Highlight,
+    HorizontalLine,
+    Image,
+    ImageCaption,
+    ImageInsert,
+    ImageResize,
+    ImageStyle,
+    ImageToolbar,
+    ImageUpload,
+    Indent,
+    Italic,
+    Link,
+    LinkImage,
+    List,
+    ListProperties,
+    Markdown,
+    MediaEmbed,
+    MediaEmbedToolbar,
+    Mention,
+    Paragraph,
+    PasteFromOffice,
+    RemoveFormat,
+    Strikethrough,
+    Style,
+    Subscript,
+    Superscript,
+    Table,
+    TableCaption,
+    TableCellProperties,
+    TableColumnResize,
+    TableProperties,
+    TableToolbar,
+    TextTransformation,
+    TodoList,
+    Underline
 ];
 
 // Editor configuration.
 Editor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'link',
-			'alignment',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'outdent',
-			'indent',
-			'todoList',
-			'|',
-			'fontSize',
-			'fontFamily',
-			'fontBackgroundColor',
-			'|',
-			'imageUpload',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
-		]
-	},
-	language: 'en',
-	image: {
-		toolbar: [
-			'imageTextAlternative',
-			'toggleImageCaption',
-			'imageStyle:inline',
-			'imageStyle:block',
-			'imageStyle:side',
-			'linkImage'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells',
-			'tableCellProperties',
-			'tableProperties'
-		]
-	}
+    toolbar: {
+        items: [
+            'heading',
+            '|',
+            'bold',
+            'italic',
+            'link',
+            'alignment',
+            'bulletedList',
+            'numberedList',
+            '|',
+            'outdent',
+            'indent',
+            'todoList',
+            '|',
+            'fontSize',
+            'fontFamily',
+            'fontBackgroundColor',
+            '|',
+            'imageUpload',
+            'blockQuote',
+            'insertTable',
+            'mediaEmbed',
+            'undo',
+            'redo'
+        ]
+    },
+    language: 'en',
+    image: {
+        toolbar: [
+            'imageTextAlternative',
+            'toggleImageCaption',
+            'imageStyle:inline',
+            'imageStyle:block',
+            'imageStyle:side',
+            'linkImage'
+        ]
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells',
+            'tableCellProperties',
+            'tableProperties'
+        ]
+    }
 };
 
-export default { Editor, EditorWatchdog };
+export default {Editor, EditorWatchdog};
